@@ -7,5 +7,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="MiningNetworkSimulator" />
+    <orderEntry type="module" module-name="SoundProcessing" />
   </component>
 </module>

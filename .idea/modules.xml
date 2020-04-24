@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/MLSelfishMining.iml" filepath="$PROJECT_DIR$/.idea/MLSelfishMining.iml" />
       <module fileurl="file://$PROJECT_DIR$/../MiningNetworkSimulator/.idea/MiningNetworkSimulator.iml" filepath="$PROJECT_DIR$/../MiningNetworkSimulator/.idea/MiningNetworkSimulator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../SoundProcessing/.idea/SoundProcessing.iml" filepath="$PROJECT_DIR$/../SoundProcessing/.idea/SoundProcessing.iml" />
     </modules>
   </component>
 </project>
