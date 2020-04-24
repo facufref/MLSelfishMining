@@ -6,13 +6,14 @@ import random
 from time import time
 from uuid import uuid4
 from urllib.parse import urlparse
-from GeneralSettings import host_address, blockchain_port
+from GeneralSettings import *
 
 
 class Miner(object):
     def __init__(self, interval=1):
         self.interval = interval
         self.uuid = str(uuid4()).replace('-', '')
+        self.node = None
         self.pool = None
         self.chain = []
         self.current_transactions = []
@@ -77,9 +78,9 @@ class Miner(object):
         count = 0
 
         while self.valid_proof(last_proof, proof, last_hash) is False:
-            if count > 10**7:  # After a fixed amount of iterations, go see if anyone else already has the solution.
+            if count > iterations_to_consult:  # After a fixed amount of iterations, go see if anyone else already has the solution.
                 return -1
-            proof = random.randint(0, 10**10)  # The idea is to have a range big enough, but it will depend on complexity
+            proof = random.randint(0, proof_range)  # The idea is to have a range big enough, but it will depend on complexity
             count += 1
 
         return proof
@@ -95,9 +96,9 @@ class Miner(object):
 
         while current_index < len(chain):
             block = chain[current_index]
-            print(f'{last_block}')
-            print(f'{block}')
-            print("\n-----------\n")
+            # print(f'{last_block}')
+            # print(f'{block}')
+            # print("\n-----------\n")
             # Check that the hash of the block is correct
             last_block_hash = self.hash(last_block)
             if block['previous_hash'] != self.hash(last_block):
@@ -118,42 +119,52 @@ class Miner(object):
         by replacing our chain with the longest one in the network.
         :return: <bool> True if our chain was replaced, False if not
         """
+        best_neighbor_chain = None
+        max_neighbor_length = 0
         neighbours = []
+        pool_chain = None
+        pool_chain_length = 0
+
         response = requests.get(f'http://{host_address}{blockchain_port}/nodes/get')
         if response.status_code == 200:
             neighbours = response.json()['nodes']
 
-        new_chain = None
-        better_node = None
-
-        # We're only looking for chains longer than ours
-        max_length = len(self.chain)
+        # Shuffle the list so we consult them in random order
+        random.shuffle(neighbours)
 
         # Grab and verify the chains from all the nodes in our network
         for node in neighbours:
-            response = requests.get(f'http://{node}/chain')
+            if node == self.node:
+                continue
+
+            response = requests.get(f'http://{node}/chain', params={'uuid': self.uuid})
 
             if response.status_code == 200:
                 length = response.json()['length']
                 chain = response.json()['chain']
 
+                if node == self.pool:
+                    pool_chain = chain
+                    pool_chain_length = length
                 # Check if the length is longer and the chain is valid
-                if length > max_length and self.valid_chain(chain):
-                    max_length = length
-                    new_chain = chain
-                    better_node = node
+                elif length > max_neighbor_length and self.valid_chain(chain):
+                    max_neighbor_length = length
+                    best_neighbor_chain = chain
 
         # Replace our chain if we discovered a new, valid chain longer than ours
-        if new_chain:
-            self.chain = new_chain
-            print('The chain was replaced')
+        if pool_chain_length >= len(self.chain):
+            self.chain = pool_chain
+            print('The chain was replaced by the pool')
 
-            if self.pool is not None and better_node != self.pool:
-                # Alert the pool that there is a better chain around
-                if self.pool is not None:
-                    requests.post(f'http://{self.pool}/pool/update_chain', json={'sender': None, 'chain': new_chain})
-            return True
-        return False
+        if max_neighbor_length > len(self.chain):
+            self.chain = best_neighbor_chain
+            print('The chain was replaced by a neighbor')
+
+        # For selfish scenario, we always send the best node around.
+        # If it's better it will be replaced, otherwise it won't, but the pool has the decision
+        if self.pool is not None and best_neighbor_chain is not None:
+            # Alert the pool that there is a better chain around
+            requests.post(f'http://{self.pool}/pool/update_chain', json={'sender': None, 'chain': best_neighbor_chain})
 
     def mine(self):
         # First verify that our chain is up to date
@@ -239,7 +250,6 @@ class Miner(object):
         :param last_hash: <str> The hash of the Previous Block
         :return: <bool> True if correct, False if not.
         """
-        complexity = 6
         guess = f'{last_proof}{proof}{last_hash}'.encode()
         guess_hash = hashlib.sha256(guess).hexdigest()
         return guess_hash[:complexity] == "0" * complexity

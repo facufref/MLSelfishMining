@@ -41,14 +41,9 @@ class Pool(object):
         every member in the pool will consult it to know which is the longest one.
         :return: <bool> True if our chain was replaced, False if not
         """
-
-        # We're only looking for chains longer than ours
-        max_length = len(self.chain)
-        length = len(new_chain)
-
         # Check if the length is longer.
         # We will trust the miners for now so no need to use "valid_chain(chain)" validation
-        if length > max_length:
+        if len(new_chain) > len(self.chain):
             self.chain = new_chain
             print('The chain was replaced')
 

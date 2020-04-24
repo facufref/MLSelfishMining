@@ -116,5 +116,5 @@ if __name__ == '__main__':
 
     #  On start, register the Miner on the blockchain
     requests.post(f'http://{host_address}{blockchain_port}/nodes/register', json={'nodes': [f"{host_address}{port}"]})
-
+    miner.node = f"{host_address}{port}"
     app.run(host='0.0.0.0', port=port)
