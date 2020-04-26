@@ -10,7 +10,7 @@ from sklearn.svm import SVC
 from sklearn.neural_network import MLPClassifier
 
 
-class SoundClassifier:
+class SelfishMiningClassifier:
     def __init__(self, algorithm):
         if algorithm == 'knn':
             self._classifier = KNeighborsClassifier(n_neighbors=6)

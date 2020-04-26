@@ -23,7 +23,7 @@ def get_data_and_filenames(df, root, chunk_size):
     df.set_index('fname', inplace=True)
     for f in df.index:
         file = pd.read_json(root + f)
-        rates = get_time_rate(file)
+        rates = get_time_rate(file.chain)
         split_rates = list(chunks(rates, chunk_size))
         if len(split_rates[-1]) < chunk_size:  # Remove element if it is not the same size than the others
             split_rates.remove(split_rates[-1])
@@ -31,15 +31,23 @@ def get_data_and_filenames(df, root, chunk_size):
         filenames.extend(repeated_filenames)
         repeated_target = [df.at[f, 'class']] * len(split_rates)
         target.extend(repeated_target)
+        append_meta_data(split_rates, file.iterations_to_consult[0], file.complexity[0], file.nodes[0])
         list_time_rates.append(split_rates)
     data = np.vstack(list_time_rates)
     return data, target, filenames
 
 
-def get_time_rate(file):
+def append_meta_data(rates, iterations, complexity, nodes):
+    for item in rates:
+        item.append(iterations)
+        item.append(complexity)
+        item.append(nodes)
+
+
+def get_time_rate(chain):
     last_timestamp = -1
     rates = []
-    for block in file.chain:
+    for block in chain:
         timestamp = block['timestamp']
         if last_timestamp == -1:
             last_timestamp = timestamp
@@ -56,7 +64,7 @@ def chunks(lst, n):
         yield lst[i:i + n]
 
 
-def pre_process(X_test, X_train):  # TODO Check if useful
+def pre_process(X_test, X_train):
     """One way to pre process I found on "Introduction to machine learning with Python: a guide for data scientists." Chapter 2
         There must be a better way to do this"""
     # compute the mean value per feature on the training set

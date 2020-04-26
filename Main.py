@@ -1,15 +1,20 @@
 from SelfishMiningDataManager import *
 from sklearn.metrics import classification_report
 from SelfishMiningClassifier import *
+from GeneralSettings import chunk_size
+from sklearn.externals import joblib
 
 
 def main():
-    chunk_size = 10
+    algorithm = 'svm'
     data, target, filenames = get_dataset_from_json('Training/', 'labels.csv', chunk_size)
     X_test, X_train, idx1, idx2, y_test, y_train = get_train_test(data, filenames, target)
-    clf = SoundClassifier('svm')
-    X_test, X_train = pre_process(X_test, X_train)
+    clf = SelfishMiningClassifier(algorithm)
     clf.train_classifier(X_train, y_train)
+
+    filename = f'Models/{algorithm}.joblib.pkl'
+    joblib.dump(clf, filename)
+    # clf2 = joblib.load(filename)
 
     predictions = clf.get_predictions(X_test)
     print_predictions(predictions, filenames, idx2)

@@ -626,5 +626,8 @@
             ]
         }
     ],
-    "length": 37
+    "length": 37,
+    "iterations_to_consult": 1000000,
+    "complexity": 6,
+    "nodes": 6
 }
