@@ -25,7 +25,7 @@ class SelfishMiningClassifier:
         elif algorithm == 'gradientBoosting':
             self._classifier = GradientBoostingClassifier(random_state=0)  # alternative => max_depth=1, learning_rate=0.01
         elif algorithm == 'svm':
-            self._classifier = SVC()  # alternative => C=1000, gamma=1000. Also pre-process data
+            self._classifier = SVC(C=0.5, gamma=0.5)  # alternative => C=1000, gamma=1000. Also pre-process data
         elif algorithm == 'neuralNetworks':
             self._classifier = MLPClassifier(random_state=0)  # alternative => max_iter=1000, alpha=1. Also pre-process data
         else:

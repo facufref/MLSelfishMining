@@ -92,7 +92,7 @@ class SelfishMiningDetector(object):
         rates.append(iterations_to_consult)
         rates.append(complexity)
         rates.append(6)  # TODO: calculate nodes automatically
-        filename = f'Models/svm.joblib.pkl'
+        filename = f'Models/gradientBoosting.joblib.pkl'
         clf = joblib.load(filename)
         result = clf.get_predictions([rates])
         return f'The prediction is {result[0]}'

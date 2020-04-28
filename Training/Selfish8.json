@@ -1,0 +1,493 @@
+{
+    "chain": [
+        {
+            "index": 1,
+            "previous_hash": 1,
+            "proof": 100,
+            "timestamp": 1588000606.099046,
+            "transactions": []
+        },
+        {
+            "index": 2,
+            "previous_hash": "cc9347fff8b2f7501bbba78b15ea28ad54e4c6a5945820088f2268d68e4852a3",
+            "proof": 9911493098,
+            "timestamp": 1588000624.2849913,
+            "transactions": [
+                {
+                    "amount": 1,
+                    "recipient": "ebe7ad5c96f7481bb3df884ff981f832",
+                    "sender": "0"
+                },
+                {
+                    "amount": 0.5,
+                    "recipient": "f52a025090e34b3ba8703076ec80dbfd",
+                    "sender": "ebe7ad5c96f7481bb3df884ff981f832"
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "previous_hash": "99e693cc903fd0c9a444be83ae6265471af21d4d37cb95f641a8359c4587016f",
+            "proof": 8037059212,
+            "timestamp": 1588000703.973088,
+            "transactions": [
+                {
+                    "amount": 1,
+                    "recipient": "f52a025090e34b3ba8703076ec80dbfd",
+                    "sender": "0"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "ebe7ad5c96f7481bb3df884ff981f832",
+                    "sender": "f52a025090e34b3ba8703076ec80dbfd"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "546bea9aefe540afabc4559182901b8c",
+                    "sender": "f52a025090e34b3ba8703076ec80dbfd"
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "previous_hash": "2ef1777cfc58f3639026fa3f6246dde52bec218634132e075dac3252161d180b",
+            "proof": 5060137599,
+            "timestamp": 1588000722.0779598,
+            "transactions": [
+                {
+                    "amount": 1,
+                    "recipient": "546bea9aefe540afabc4559182901b8c",
+                    "sender": "0"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "ebe7ad5c96f7481bb3df884ff981f832",
+                    "sender": "546bea9aefe540afabc4559182901b8c"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "f52a025090e34b3ba8703076ec80dbfd",
+                    "sender": "546bea9aefe540afabc4559182901b8c"
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "previous_hash": "e0bc12531c2f7bf32006a672688bb87164955a99f237ddc807fab7d076424dae",
+            "proof": 4077362035,
+            "timestamp": 1588000780.3378158,
+            "transactions": [
+                {
+                    "amount": 1,
+                    "recipient": "ebe7ad5c96f7481bb3df884ff981f832",
+                    "sender": "0"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "f52a025090e34b3ba8703076ec80dbfd",
+                    "sender": "ebe7ad5c96f7481bb3df884ff981f832"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "546bea9aefe540afabc4559182901b8c",
+                    "sender": "ebe7ad5c96f7481bb3df884ff981f832"
+                }
+            ]
+        },
+        {
+            "index": 6,
+            "previous_hash": "bc6850a997c69e81d3846b51a1517ed16bb634a8856b2871dd2560d5e8e861df",
+            "proof": 4849760381,
+            "timestamp": 1588000811.0775795,
+            "transactions": [
+                {
+                    "amount": 1,
+                    "recipient": "546bea9aefe540afabc4559182901b8c",
+                    "sender": "0"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "ebe7ad5c96f7481bb3df884ff981f832",
+                    "sender": "546bea9aefe540afabc4559182901b8c"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "f52a025090e34b3ba8703076ec80dbfd",
+                    "sender": "546bea9aefe540afabc4559182901b8c"
+                }
+            ]
+        },
+        {
+            "index": 7,
+            "previous_hash": "1dee974966de6da1ddb21fc60ac2bb8b997e81ea770f0774af20a17fed2ae500",
+            "proof": 4982752410,
+            "timestamp": 1588000826.7514324,
+            "transactions": [
+                {
+                    "amount": 1,
+                    "recipient": "546bea9aefe540afabc4559182901b8c",
+                    "sender": "0"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "ebe7ad5c96f7481bb3df884ff981f832",
+                    "sender": "546bea9aefe540afabc4559182901b8c"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "f52a025090e34b3ba8703076ec80dbfd",
+                    "sender": "546bea9aefe540afabc4559182901b8c"
+                }
+            ]
+        },
+        {
+            "index": 8,
+            "previous_hash": "2018c00bf331577ab798acb2066c27256522773a4c275ecdc3643d5f9558d3f1",
+            "proof": 7805742491,
+            "timestamp": 1588000870.6908462,
+            "transactions": [
+                {
+                    "amount": 1,
+                    "recipient": "f52a025090e34b3ba8703076ec80dbfd",
+                    "sender": "0"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "ebe7ad5c96f7481bb3df884ff981f832",
+                    "sender": "f52a025090e34b3ba8703076ec80dbfd"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "546bea9aefe540afabc4559182901b8c",
+                    "sender": "f52a025090e34b3ba8703076ec80dbfd"
+                }
+            ]
+        },
+        {
+            "index": 9,
+            "previous_hash": "9e6e3f4bc4cebe366261493c00e6a25854982ccdb9bcdd319e3c70c5411b6be3",
+            "proof": 5877193506,
+            "timestamp": 1588000896.84351,
+            "transactions": [
+                {
+                    "amount": 1,
+                    "recipient": "f52a025090e34b3ba8703076ec80dbfd",
+                    "sender": "0"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "ebe7ad5c96f7481bb3df884ff981f832",
+                    "sender": "f52a025090e34b3ba8703076ec80dbfd"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "546bea9aefe540afabc4559182901b8c",
+                    "sender": "f52a025090e34b3ba8703076ec80dbfd"
+                }
+            ]
+        },
+        {
+            "index": 10,
+            "previous_hash": "1d2a2efc40fc19e9726d64c0da107f38b9df9fa1982d897d575fe68c0ba8c280",
+            "proof": 4110653771,
+            "timestamp": 1588000933.4421976,
+            "transactions": [
+                {
+                    "amount": 1,
+                    "recipient": "f52a025090e34b3ba8703076ec80dbfd",
+                    "sender": "0"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "ebe7ad5c96f7481bb3df884ff981f832",
+                    "sender": "f52a025090e34b3ba8703076ec80dbfd"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "546bea9aefe540afabc4559182901b8c",
+                    "sender": "f52a025090e34b3ba8703076ec80dbfd"
+                }
+            ]
+        },
+        {
+            "index": 11,
+            "previous_hash": "d128cf43b43f580d34b8e4d592f831a9dffff1d4514fc8cc63a969e2ef0cd2ef",
+            "proof": 1335358769,
+            "timestamp": 1588000978.4916916,
+            "transactions": [
+                {
+                    "amount": 1,
+                    "recipient": "ebe7ad5c96f7481bb3df884ff981f832",
+                    "sender": "0"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "f52a025090e34b3ba8703076ec80dbfd",
+                    "sender": "ebe7ad5c96f7481bb3df884ff981f832"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "546bea9aefe540afabc4559182901b8c",
+                    "sender": "ebe7ad5c96f7481bb3df884ff981f832"
+                }
+            ]
+        },
+        {
+            "index": 12,
+            "previous_hash": "c90081b93fd5748418c2b6e4247b0bddc4d31dc219e1a5d95b31371b26472c3c",
+            "proof": 2276065399,
+            "timestamp": 1588001039.5084581,
+            "transactions": [
+                {
+                    "amount": 1,
+                    "recipient": "f52a025090e34b3ba8703076ec80dbfd",
+                    "sender": "0"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "ebe7ad5c96f7481bb3df884ff981f832",
+                    "sender": "f52a025090e34b3ba8703076ec80dbfd"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "546bea9aefe540afabc4559182901b8c",
+                    "sender": "f52a025090e34b3ba8703076ec80dbfd"
+                }
+            ]
+        },
+        {
+            "index": 13,
+            "previous_hash": "a207b4898cc890d3a497079a71811b8ce60a7ef562ee8220fb8c8ab4e427d607",
+            "proof": 8700490666,
+            "timestamp": 1588001161.0776575,
+            "transactions": [
+                {
+                    "amount": 1,
+                    "recipient": "546bea9aefe540afabc4559182901b8c",
+                    "sender": "0"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "ebe7ad5c96f7481bb3df884ff981f832",
+                    "sender": "546bea9aefe540afabc4559182901b8c"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "f52a025090e34b3ba8703076ec80dbfd",
+                    "sender": "546bea9aefe540afabc4559182901b8c"
+                }
+            ]
+        },
+        {
+            "index": 14,
+            "previous_hash": "7c6aed7a51613c6c94f1304dfef4fc61142044f48bbb5ff4d04e65d70eb208f9",
+            "proof": 8004953409,
+            "timestamp": 1588001248.9005604,
+            "transactions": [
+                {
+                    "amount": 1,
+                    "recipient": "ebe7ad5c96f7481bb3df884ff981f832",
+                    "sender": "0"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "f52a025090e34b3ba8703076ec80dbfd",
+                    "sender": "ebe7ad5c96f7481bb3df884ff981f832"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "546bea9aefe540afabc4559182901b8c",
+                    "sender": "ebe7ad5c96f7481bb3df884ff981f832"
+                }
+            ]
+        },
+        {
+            "index": 15,
+            "previous_hash": "f26c62a363145aa56110a5ea034d7bd3594ea5db83b58b26a693c559c838b8fe",
+            "proof": 5398079261,
+            "timestamp": 1588001297.1765697,
+            "transactions": [
+                {
+                    "amount": 1,
+                    "recipient": "f52a025090e34b3ba8703076ec80dbfd",
+                    "sender": "0"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "ebe7ad5c96f7481bb3df884ff981f832",
+                    "sender": "f52a025090e34b3ba8703076ec80dbfd"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "546bea9aefe540afabc4559182901b8c",
+                    "sender": "f52a025090e34b3ba8703076ec80dbfd"
+                }
+            ]
+        },
+        {
+            "index": 16,
+            "previous_hash": "1c3b463b0eaa8a48ae9ef87aab546a641015179c559d7539e1f683bd3cf26185",
+            "proof": 9371424233,
+            "timestamp": 1588001778.00589,
+            "transactions": [
+                {
+                    "amount": 1,
+                    "recipient": "44bfff98f1394009b65762b37911b7fc",
+                    "sender": "0"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "c8cdf506205648ba9656f4b18e767453",
+                    "sender": "44bfff98f1394009b65762b37911b7fc"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "304e4fc19e7e40278c3b575dd705c327",
+                    "sender": "44bfff98f1394009b65762b37911b7fc"
+                }
+            ]
+        },
+        {
+            "index": 17,
+            "previous_hash": "3ee243627a1d19dfc14e0b0d3e45ef4e2b65dc9f4e95393b0e5b3c47f167939c",
+            "proof": 4372564767,
+            "timestamp": 1588001820.9466944,
+            "transactions": [
+                {
+                    "amount": 1,
+                    "recipient": "546bea9aefe540afabc4559182901b8c",
+                    "sender": "0"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "ebe7ad5c96f7481bb3df884ff981f832",
+                    "sender": "546bea9aefe540afabc4559182901b8c"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "f52a025090e34b3ba8703076ec80dbfd",
+                    "sender": "546bea9aefe540afabc4559182901b8c"
+                }
+            ]
+        },
+        {
+            "index": 18,
+            "previous_hash": "0ec9f8cc87d25a352e958825537e1f0b9b2e256656d827133fea15a9f3404d7b",
+            "proof": 5209025878,
+            "timestamp": 1588001961.4094598,
+            "transactions": [
+                {
+                    "amount": 1,
+                    "recipient": "f52a025090e34b3ba8703076ec80dbfd",
+                    "sender": "0"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "ebe7ad5c96f7481bb3df884ff981f832",
+                    "sender": "f52a025090e34b3ba8703076ec80dbfd"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "546bea9aefe540afabc4559182901b8c",
+                    "sender": "f52a025090e34b3ba8703076ec80dbfd"
+                }
+            ]
+        },
+        {
+            "index": 19,
+            "previous_hash": "91b6858025875b2f5ef4c8f945cb6b14af9569061c9bc58cc15ddeae147f4004",
+            "proof": 7161472750,
+            "timestamp": 1588002053.1139863,
+            "transactions": [
+                {
+                    "amount": 1,
+                    "recipient": "ebe7ad5c96f7481bb3df884ff981f832",
+                    "sender": "0"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "f52a025090e34b3ba8703076ec80dbfd",
+                    "sender": "ebe7ad5c96f7481bb3df884ff981f832"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "546bea9aefe540afabc4559182901b8c",
+                    "sender": "ebe7ad5c96f7481bb3df884ff981f832"
+                }
+            ]
+        },
+        {
+            "index": 20,
+            "previous_hash": "edf08453e208e821beb17d7b5e0da9b05c29ac0e4430d02bb0c221c86e105e67",
+            "proof": 881182540,
+            "timestamp": 1588002089.291286,
+            "transactions": [
+                {
+                    "amount": 1,
+                    "recipient": "f52a025090e34b3ba8703076ec80dbfd",
+                    "sender": "0"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "ebe7ad5c96f7481bb3df884ff981f832",
+                    "sender": "f52a025090e34b3ba8703076ec80dbfd"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "546bea9aefe540afabc4559182901b8c",
+                    "sender": "f52a025090e34b3ba8703076ec80dbfd"
+                }
+            ]
+        },
+        {
+            "index": 21,
+            "previous_hash": "b86e097e8afe2951f17f16e1337d6a0d42d678e2ca5221c36fd20104ce7b807a",
+            "proof": 5341639834,
+            "timestamp": 1588002145.006881,
+            "transactions": [
+                {
+                    "amount": 1,
+                    "recipient": "f52a025090e34b3ba8703076ec80dbfd",
+                    "sender": "0"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "ebe7ad5c96f7481bb3df884ff981f832",
+                    "sender": "f52a025090e34b3ba8703076ec80dbfd"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "546bea9aefe540afabc4559182901b8c",
+                    "sender": "f52a025090e34b3ba8703076ec80dbfd"
+                }
+            ]
+        },
+        {
+            "index": 22,
+            "previous_hash": "65b4367819e1cb742f06bf0207e76aa8a1d604e949129797ed9aec0004bcbbf0",
+            "proof": 4895105065,
+            "timestamp": 1588002184.9937735,
+            "transactions": [
+                {
+                    "amount": 1,
+                    "recipient": "ebe7ad5c96f7481bb3df884ff981f832",
+                    "sender": "0"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "f52a025090e34b3ba8703076ec80dbfd",
+                    "sender": "ebe7ad5c96f7481bb3df884ff981f832"
+                },
+                {
+                    "amount": 0.3333333333333333,
+                    "recipient": "546bea9aefe540afabc4559182901b8c",
+                    "sender": "ebe7ad5c96f7481bb3df884ff981f832"
+                }
+            ]
+        }
+    ],
+    "length": 22,
+    "iterations_to_consult": 1000000,
+    "complexity": 6,
+    "nodes": 6
+}

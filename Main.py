@@ -6,10 +6,11 @@ from sklearn.externals import joblib
 
 
 def main():
-    algorithm = 'svm'
+    algorithm = 'gradientBoosting'
     data, target, filenames = get_dataset_from_json('Training/', 'labels.csv', chunk_size)
     X_test, X_train, idx1, idx2, y_test, y_train = get_train_test(data, filenames, target)
     clf = SelfishMiningClassifier(algorithm)
+    # X_test, X_train = pre_process(X_test, X_train)
     clf.train_classifier(X_train, y_train)
 
     filename = f'Models/{algorithm}.joblib.pkl'
